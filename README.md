@@ -1,5 +1,7 @@
 # ansible.moddevops.com
 
++ [ansible.moddevops.com](https://gansible.moddevops.com)
++ [mod-devops/ansible](https://github.com/mod-devops/ansible)
 
 ## Szybka instalacja i test z [install_ansible.sh](install_ansible.sh)
 
