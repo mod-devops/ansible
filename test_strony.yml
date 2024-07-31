@@ -1,0 +1,20 @@
+---
+- name: Test strony i serwera
+  hosts: localhost
+  tasks:
+    - name: Sprawdź działanie serwera HTTP
+      uri:
+        url: http://example.com
+        return_content: yes
+      register: http_response
+
+    - name: Wyświetl status odpowiedzi
+      debug:
+        msg: "Status odpowiedzi: {{ http_response.status }}"
+
+    - name: Sprawdź obecność określonego ciągu w treści strony
+      assert:
+        that:
+          - "'Example Domain' in http_response.content"
+        fail_msg: "Nie znaleziono oczekiwanego ciągu w treści strony"
+        success_msg: "Znaleziono oczekiwany ciąg w treści strony"

@@ -4,7 +4,8 @@
 ## Szybka instalacja i test z [install_ansible.sh](install_ansible.sh)
 
 
-Skrypt w bashu, który automatyzuje proces instalacji Ansible i konfiguracji pierwszego projektu:
+Skrypt w bashu, który automatyzuje proces instalacji Ansible i konfiguracji pierwszego projektu.
+Ten skrypt wykona wszystkie wcześniej opisane kroki, włącznie z instalacją Ansible, utworzeniem struktury katalogów, plików konfiguracyjnych i playbooka testowego.
 
 1. Zapisz go do pliku, na przykład [install_ansible.sh](install_ansible.sh)
 2. Nadaj mu uprawnienia do wykonywania:
@@ -16,14 +17,24 @@ Skrypt w bashu, który automatyzuje proces instalacji Ansible i konfiguracji pie
    sudo ./install_ansible.sh
    ```
 
-Ten skrypt wykona wszystkie wcześniej opisane kroki, włącznie z instalacją Ansible, utworzeniem struktury katalogów, plików konfiguracyjnych i playbooka testowego.
+
+![img.png](img.png)
+
 
 Po zakończeniu działania skryptu, będziesz mógł uruchomić playbook testowy zgodnie z instrukcją wyświetloną na końcu.
 
-Czy chciałbyś, żebym wyjaśnił jakąś część tego skryptu?
+
+![img_1.png](img_1.png)
 
 
-![img.png](img.png)
+4. Uruchomienie playbooka:
+
+```bash
+ansible-playbook test_strony.yml
+```
+
+![img_2.png](img_2.png)
+
 ---
 
 
@@ -100,8 +111,6 @@ ansible-playbook test_strony.yml
 ```
 
 Ten przykład sprawdza dostępność strony example.com, wyświetla status odpowiedzi i sprawdza, czy w treści strony znajduje się określony ciąg.
-
-Czy chcesz, żebym wyjaśnił któryś z tych kroków bardziej szczegółowo?
 
 
 ----
